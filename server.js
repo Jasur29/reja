@@ -6,6 +6,15 @@ const app = express();
 const http = require("http");
 const fs = require("fs");
 
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
+
 //web serverni qurishda 4 bosqichi
 
 //1 bosqich-expressga kirib kelayotgan malumotlarga bogliq kodlar yoziladi
@@ -45,7 +54,7 @@ app.post("/create-item", (req, res) => {
   //res.json({ test: "success" });
 });
 app.get("/author", function (req, res) {
-  res.render("author");
+  res.render("author", { user: user });
 });
 
 const server = http.createServer(app); // server hosil qilindi
