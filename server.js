@@ -4,6 +4,7 @@ console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
 
 //web serverni qurishda 4 bosqichi
 
@@ -13,7 +14,8 @@ app.use(express.static("public")); //browserdan kirib kelayotgan har qandar zapr
 app.use(express.json()); // kirib kelayotgan json holatidagi datani object holatiga ogirib beradi.
 //client va server ortasida malumotlar json formatda boladi
 app.use(express.urlencoded({ extended: true })); // htmldan traditional form request qilinganda express serverimiz qabul qilishi uchun. agar
-//bu kod yozilmasa serverimiz htmldan kiritildan malumotlarni ignore qiladi.
+//bu kod yozilmasa serverimiz htmldan kiritildan malumotlarni ignore qiladi. misol uchun kod kiritamiz browserda formda
+//uni qabul qilish uchun shu kod zarur
 
 //2 sessionga bogliq kodlar yoziladi/////////////////
 
@@ -39,14 +41,14 @@ app.set("view engine", "ejs"); // bunda view engine ejs ekanligini korsatilib be
 //   res.end(`<h1 style="background:red">siz sovgalar bolimidasiz</h1>`);
 // });
 app.post("/create-item", (req, res) => {
-  console.log(req.body);
-  res.json({ test: "success" });
+  //console.log(req.body);
+  //res.json({ test: "success" });
 });
-app.get("/", function (req, res) {
-  res.render("harid");
+app.get("/author", function (req, res) {
+  res.render("author");
 });
 
-// const server = http.createServer(app); // server hosil qilindi
+const server = http.createServer(app); // server hosil qilindi
 let PORT = 3000;
 server.listen(PORT, function () {
   console.log(`The sever is running successfully on port: ${PORT}`); // muvafaqqiyatli ishlasa bu chiqadi.
