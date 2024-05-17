@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/author/images/main.css" />
+    <link rel="stylesheet" href="/main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -15,5 +15,293 @@
     ></script>
     <title>Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_1">
+            <div class="left_1-1">
+              <img src="images/face.jpg" width="156px" height=" 135px" alt="" />
+            </div>
+            <div class="left_1-2"><%=user.name%></div>
+            <div class="left_1-3"><%=user.profession%></div>
+            <div class="left_icons">
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/facebook.svg" class="icon-1" />
+                </div>
+              </a>
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/instagram.svg" class="icon-1" />
+                </div>
+              </a>
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/twitter.svg" class="icon-1" />
+                </div>
+              </a>
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/linkedin.svg" class="icon-1" />
+                </div>
+              </a>
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/Youtube.svg" class="icon-1" />
+                </div>
+              </a>
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="/public/author/icon/dribbble.svg" class="icon-1" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_2">
+            <div class="left_2-general-info">
+              <div class="left_age">Age:</div>
+              <span><%=user.age%></span>
+            </div>
+
+            <div class="left_2-general-info">
+              <div class="left_residence">Residence:</div>
+              <span><%=user.residence%></span>
+            </div>
+
+            <div class="left_2-general-info">
+              <div class="left_freelance">Freelance:</div>
+              <span style="color: var(--Available, #7eb942)">Available</span>
+            </div>
+
+            <div class="left_2-general-info">
+              <div class="left_address">Address:</div>
+              <span><%=user.address%></span>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_3">
+            <div class="left_languages"><span>Languages</span></div>
+            <div class="left_language">
+              <div class="left_lang_1">
+                <span><%=user.Languages[0]%></span>
+                <span>100%</span>
+              </div>
+
+              <img src="images/bangladesh.png" alt="" />
+            </div>
+
+            <div class="left_language">
+              <div class="left_lang_1">
+                <span><%=user.Languages[1]%></span>
+                <span>80%</span>
+              </div>
+
+              <img src="images/english.png" alt="" />
+            </div>
+
+            <div class="left_language">
+              <div class="left_lang_1">
+                <span><%=user.Languages[2]%></span>
+                <span>60%</span>
+              </div>
+
+              <img src="images/spain.png" alt="" />
+            </div>
+          </div>
+
+          <div class="marginer"></div>
+          <div class="left_4">
+            <div class="left_skills"><span>Skills</span></div>
+            <div class="left_skill">
+              <div class="left_skill_1">
+                <span><%=user.skills[0]%></span>
+                <span>90%</span>
+              </div>
+
+              <img src="images/html.png" alt="" />
+            </div>
+
+            <div class="left_skill">
+              <div class="left_skill_1">
+                <span><%=user.skills[1]%></span>
+                <span>85%</span>
+              </div>
+
+              <img src="images/css.png" alt="" />
+            </div>
+
+            <div class="left_skill">
+              <div class="left_skill_1">
+                <span><%=user.skills[2]%></span>
+                <span>80%</span>
+              </div>
+
+              <img src="images/js.png" alt="" />
+            </div>
+
+            <div class="left_skill">
+              <div class="left_skill_1">
+                <span><%=user.skills[3]%></span>
+                <span>75%</span>
+              </div>
+
+              <img src="images/PHP.png" alt="" />
+            </div>
+
+            <div class="left_skill">
+              <div class="left_skill_1">
+                <span><%=user.skills[4]%></span>
+                <span>85%</span>
+              </div>
+
+              <img src="images/wordPress.png" alt="" />
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_5">
+            <div class="left_extra_skills"><span>Extra Skills</span></div>
+            <div class="left_extra_skill">
+              <img src="images/skills_Icons.png" alt="" />
+              <span><%=user.extra_skills[0]%></span>
+            </div>
+
+            <div class="left_extra_skill">
+              <img src="images/skills_Icons.png" alt="" />
+              <span><%=user.extra_skills[1]%></span>
+            </div>
+
+            <div class="left_extra_skill">
+              <img src="images/skills_Icons.png" alt="" />
+              <span><%=user.extra_skills[2]%></span>
+            </div>
+
+            <div class="left_extra_skill">
+              <img src="images/skills_Icons.png" alt="" />
+              <span><%=user.extra_skills[3]%></span>
+            </div>
+          </div>
+          <div class="marginer"></div>
+        </div>
+        <div class="midd_frame">
+          <div class="midd_top">
+            <div class="midd_top_left">
+              <div class="midd_top_left_header_div">
+                <h3 class="midd_top_left_header">
+                  Full Stack Developer And Father
+                </h3>
+              </div>
+              <div class="midd_top_left_paragraph_div">
+                <p class="midd_top_left_paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+                  volutpat feugiat placerat lobortis. Natoque rutrum semper sed
+                  suspendisse nunc lectus.
+                </p>
+              </div>
+
+              <a href="#"
+                ><div class="midd_top_left_hire">
+                  <span>HIRE ME <img src="images/Book Me.png" alt="" /></span>
+                </div>
+              </a>
+            </div>
+            <div class="midd_top_right">
+              <img src="images/Man.png" alt="" />
+            </div>
+            <div class="midd_top_right"></div>
+          </div>
+          <div class="midd_bottom">
+            <div class="midd_bottom_top">
+              <div class="midd_bottom_top_header"><h4>My Services</h4></div>
+              <div class="midd_bottom_top_paragraph">
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                  lorem ipsum
+                </p>
+              </div>
+            </div>
+            <div class="midd_bottom_bottom">
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_img">
+                  <img src="images/coding.png" alt="" />
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <strong>web development</strong>
+                  <span>blog, e-commerce</span>
+                </div>
+              </div>
+
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_img">
+                  <img src="images/illustration.png" alt="" />
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <strong>uI/uX design</strong>
+                  <span>Mobile app, website design</span>
+                </div>
+              </div>
+
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_img">
+                  <img src="images/Microphone.png" alt="" />
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <strong>sound design</strong>
+                  <span>Voice Over, Beat Making</span>
+                </div>
+              </div>
+
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_img">
+                  <img src="images/game-development.png" alt="" />
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <strong>game design</strong>
+                  <span>Character Design, Props & Objects</span>
+                </div>
+              </div>
+
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_img">
+                  <img src="images/Photographer.png" alt="" />
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <strong>photography</strong>
+                  <span>portrait, product photography</span>
+                </div>
+              </div>
+
+              <div class="midd_bottom_bottom_box">
+                <div class="midd_bottom_bottom_strong">
+                  <strong>advertising</strong>
+                </div>
+                <div class="midd_bottom_bottom_info">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vitae nulla diam in ac dictum a urna viverra morbi.
+                  </p>
+                  <a href="">Order Now ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_frame">
+          <div class="right_top">
+            <img src="images/Contrast.png" alt="" />
+          </div>
+          <div class="right_middle">
+            <img src="images/Home.png" alt="" />
+            <img src="images/Service.png" alt="" />
+            <img src="images/cv.png" alt="" />
+            <img src="images/vector.png" alt="" />
+            <img src="images/Blog.png" alt="" />
+            <img src="images/Contact.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
