@@ -19,7 +19,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 
 //1 bosqich-expressga kirib kelayotgan malumotlarga bogliq kodlar yoziladi
 
-app.use(express.static("public")); //browserdan kirib kelayotgan har qandar zaproslar uchun "public" folderi ochiq.
+app.use(express.static("public")); //browserdan kirib kelayotgan har qandar zaproslar uchun "public" folderi ochiq. MIDDLEWARE DESIGN PATTERN
 app.use(express.json()); // kirib kelayotgan json holatidagi datani object holatiga ogirib beradi.
 //client va server ortasida malumotlar json formatda boladi
 app.use(express.urlencoded({ extended: true })); // htmldan traditional form request qilinganda express serverimiz qabul qilishi uchun. agar
