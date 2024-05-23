@@ -53,12 +53,17 @@ app.post("/create-item", (req, res) => {
   //console.log(req.body);
   //res.json({ test: "success" });
 });
-app.get("/author", function (req, res) {
-  res.render("author", { user: user });
+// app.get("/author", function (req, res) {
+//   res.render("author", { user: user });
+// });
+app.get("/", function (req, res) {
+  res.render("reja", { user: user });
 });
 
 const server = http.createServer(app); // server hosil qilindi
 let PORT = 3000;
 server.listen(PORT, function () {
-  console.log(`The sever is running successfully on port: ${PORT}`); // muvafaqqiyatli ishlasa bu chiqadi.
+  console.log(
+    `The sever is running successfully on port: ${PORT} , http://localhost:${PORT}`
+  ); // muvafaqqiyatli ishlasa bu chiqadi.
 });
