@@ -14,7 +14,8 @@ mongodb.connect(
     if (err) console.log(" ERROR on connection MongoDB");
     else {
       console.log("MongoDB connection succeed");
-      //console.log(client);
+      module.exports = client;
+      //console.log(client); ichida database connection object
       const app = require("./app");
       const server = http.createServer(app); // server hosil qilindi
       let PORT = 3000;
