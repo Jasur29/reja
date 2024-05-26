@@ -1,21 +1,58 @@
-// B-TASK:
+// B-TASK:MITASK-C
+
+// Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning
+// 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+// MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va
+//  2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir
+//  20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+const moment = require("moment");
+
+class Shop {
+  non;
+  lagmon;
+  cola;
+  time = moment().format("HH:MM");
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+  qoldiq() {
+    console.log(
+      `Hozir ${this.time} da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola bor`
+    );
+  }
+  sotuv(number) {
+    if (this.non >= number) {
+      this.non -= number;
+      this.qoldiq();
+    } else {
+      console.log("Shop da non yetarli emas");
+    }
+  }
+  qabul(numb) {
+    this.cola += numb;
+  }
+}
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
 
 // Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
-const validator = require("validator");
-let count = 0;
-function countDigits(string) {
-  for (let i = 0; i < string.length; i++) {
-    if (validator.isNumeric(string[i])) {
-      count++;
-    }
-  }
-  return count;
-}
+// const validator = require("validator");
+// let count = 0;
+// function countDigits(string) {
+//   for (let i = 0; i < string.length; i++) {
+//     if (validator.isNumeric(string[i])) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-countDigits("ad2a54y79wet0sfgb9");
-console.log(count);
+// countDigits("ad2a54y79wet0sfgb9");
+// console.log(count);
 
 // //Masalani izohi
 // //A-TASK:
