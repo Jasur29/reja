@@ -81,9 +81,28 @@ app.post("/delete-item", (req, res) => {
   // console.log(id);
   // res.removeHeader("done");
 });
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { reja: data.new_input } },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
 // app.get("/author", function (req, res) {
 //   res.render("author", { user: user });
 // });
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma narsa ochirilsin" });
+    });
+  }
+});
+
 app.get("/", function (req, res) {
   console.log("user entered /");
   db.collection("plans")
