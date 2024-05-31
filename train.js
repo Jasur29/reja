@@ -2,8 +2,20 @@
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
+
+// 1 yo'l
+
+// function getReverse(a) {
+//   return a.split("").reverse().join("");
+// }
+
+//2 yo'l
 function getReverse(a) {
-  return a.split("").reverse().join("");
+  let b = "";
+  for (let i = a.length - 1; i >= 0; i--) {
+    b += a[i];
+  }
+  return b;
 }
 
 console.log(getReverse("hello"));
