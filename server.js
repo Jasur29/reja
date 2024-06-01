@@ -18,7 +18,7 @@ mongodb.connect(
       //console.log(client); ichida database connection object
       const app = require("./app");
       const server = http.createServer(app); // server hosil qilindi
-      let PORT = 3000;
+      let PORT = 7012;
       server.listen(PORT, function () {
         console.log(
           `The sever is running successfully on port: ${PORT} , http://localhost:${PORT}`
